@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script displays "bad luck" the 4th iteration, "good luck" the 8th, and "Holberton School" for the rest from 1 to 10
+i=1
+while [ $i -le 10 ]
+do
+    if [ $i == 4 ]
+    then
+echo "bad luck"
+    elif [ $i == 8 ]
+    then
+echo "good luck"
+    else
+echo "Holberton School"
+    fi
+
+    ((i++))
+done
