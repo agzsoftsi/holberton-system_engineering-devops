@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script lists all currently running processes
+ps ux -e --forest
