@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script where use pkill to murder some program.
+pkill -f 7-highlander
