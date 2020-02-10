@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script kills the process "4-to_infinity_and_beyond" using pkill
+pkill -f "4-to_infinity_and_beyond"
