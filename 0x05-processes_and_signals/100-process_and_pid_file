@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Script stores its PID in a file that gets deleted upon exit
+sudo bash -c "echo $BASHPID > /var/run/holbertonscript.pid"
+while true
+do
+    echo "To infinity and beyond"
+    trap 'echo "Y U no love me?!"' SIGINT
+    trap 'echo "I hate the kill command"; sudo bash -c "rm /var/run/holbertonscript.pid"; exit' SIGTERM
+    trap 'sudo bash -c "rm /var/run/holbertonscript.pid"; exit' SIGQUIT
+    sleep 2
+done
