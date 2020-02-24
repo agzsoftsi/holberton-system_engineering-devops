@@ -96,9 +96,15 @@ find . -iname "access.log*"
 
 Print all matching lines (without the filename or the file path) in all files under the current directory that start with 'access.log' that contain the string "500", Note that there are no files named 'access.log' in the current directory, you will need to search recursively
 ```
-
+find . -iname "access.log*" | xargs grep -h "500"
 ```
 
+- Task9: extract_ip_address
+
+Extract all ip addresses from files that start with 'access.log' printing one ip address per line
+```
+find . -iname "access.log*" | xargs grep -Eo '^[^ ]+'
+```
 
 
 2. Reach the perfect cube, 27 #advanced
@@ -106,3 +112,59 @@ Print all matching lines (without the filename or the file path) in all files un
 Complete the 9 next tasks, getting to 27 total
 
 File: 2-last-9-tasks
+
+- Task10: delete_files
+
+Delete of the files in this challenge directory including all subdirectories and their contents 
+```
+find . -delete
+```
+
+- Task11: count_files
+
+Count the number of files in the current working directory. print the number of files as a single integer
+```
+ls -l | wc -l
+```
+
+- Task12: simple_sort
+
+Print the contents of access.log sorted
+```
+sort access.log
+```
+
+- Task13: count_string_in_line
+
+Print the number of lines in access.log that contain the string "GET".
+```
+grep "GET" access.log | wc -l
+```
+
+- Task14: split_on_a_char
+
+The file split-me.txt contains a list of numbers separated by a ';' character. Split the numbers on the ';' character, one number per line.
+```
+cat split-me.txt | tr ";" "\n"
+```
+
+- Task15: print_number_sequence
+
+Print the numbers 1 to 100 separated by spaces
+```
+echo {1..100}
+```
+
+- Task16: remove_files_with_extension
+
+There are files in this challenge with different file extensions. Remove all files with the .doc extension recursively in the current working directory.
+```
+find . -iname "*.doc" -delete
+```
+
+- Task17: replace_text_in_files
+
+This challenge has text files that contain the phrase "challenges are difficult". Delete this phrase recursively from all text files.
+```
+find . -iname "*.txt" | 
+```
