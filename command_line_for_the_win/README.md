@@ -42,6 +42,63 @@ hint_ there are many ways to print text on the command line, one way is with the
 echo "Hello World"
 ```
 
+- Task2: current_working_directory
+
+Print the current working directory
+```
+pwd
+```
+
+- Task3: list_files
+
+List names of all the files in the current directory, one file per line
+```
+ls
+```
+
+
+- Task4: print_file_content
+
+There is a file named 'access.log' in the current directory, print the contents
+```
+cat access.log
+```
+
+- Task5: last_lines
+
+Print the last 5 lines of 'access.log'
+```
+tail -n 5 access.log
+```
+
+- Task6: find_string_in_a_file
+
+There is a file named 'access.log' in the current working directory. print all lines in this file that contains the string 'GET'
+```
+grep "GET" access.log
+```
+
+- Task6: search_for_files_containing_string
+
+Print all files in the current directory, one per line (not the path, just the filename) that contain the strins '500'
+```
+grep -l "500" *
+```
+
+- Task7: search_for_files_by_extension
+
+Print the relative file paths, one path per line for all filenames that start with 'access.log' in the current directory
+```
+find . -iname "access.log*"
+```
+
+- Task8: search_for_string_in_files_recursive
+
+Print all matching lines (without the filename or the file path) in all files under the current directory that start with 'access.log' that contain the string "500", Note that there are no files named 'access.log' in the current directory, you will need to search recursively
+```
+
+```
+
 
 
 2. Reach the perfect cube, 27 #advanced
