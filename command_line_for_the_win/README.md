@@ -34,6 +34,16 @@ Complete the 9 next tasks, getting to 18 total.
 
 File: 1-next-9-tasks
 
+- Task1: Hello_world
+
+Print "Hello World".
+hint_ there are many ways to print text on the command line, one way is with the 'echo' command
+```
+echo "Hello World"
+```
+
+
+
 2. Reach the perfect cube, 27 #advanced
 
 Complete the 9 next tasks, getting to 27 total
