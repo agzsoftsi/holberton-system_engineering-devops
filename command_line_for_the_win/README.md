@@ -21,18 +21,12 @@ This project is NOT mandatory at all. It is 100% optional. Doing any part of thi
 
 # TASK
 
-0. First 九 tasks #advanced
+## 0. First 九 tasks #advanced
 
 Complete the first 9 tasks.
 
 File: 0-first_9_tasks
 
-
-1. Reach חי completed tasks #advanced
-
-Complete the 9 next tasks, getting to 18 total.
-
-File: 1-next-9-tasks
 
 - Task1: Hello_world
 
@@ -107,9 +101,9 @@ find . -iname "access.log*" | xargs grep -Eo '^[^ ]+'
 ```
 
 
-2. Reach the perfect cube, 27 #advanced
+## 1. Reach חי completed tasks
 
-Complete the 9 next tasks, getting to 27 total
+Complete the 9 next tasks, getting to 18 total
 
 File: 2-last-9-tasks
 
@@ -185,7 +179,7 @@ find . -type f -printf "%f\n"
 
 
 
-2. Reach the perfect cube, 27 #advanced
+## 2. Reach the perfect cube, 27 #advanced
 
 Complete the 9 next tasks, getting to 27 total.
 
