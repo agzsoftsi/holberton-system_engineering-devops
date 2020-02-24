@@ -166,5 +166,27 @@ find . -iname "*.doc" -delete
 
 This challenge has text files that contain the phrase "challenges are difficult". Delete this phrase recursively from all text files.
 ```
-find . -iname "*.txt" | 
+find . -iname "*.txt" -exec sed -i 's/challenges are difficult//g' "{}" "+" 
 ```
+
+- Task18: sum_all_numbers
+
+The file sum-me.txt have a list of numbers, one per line. Print the sum of these numbers.
+```
+jq -s add sum-me.txt
+```
+
+- Task19: just_the_files
+
+Print all files in the current directory recursively without the leading directory path.
+```
+find . -type f -printf "%f\n"
+```
+
+
+
+2. Reach the perfect cube, 27 #advanced
+
+Complete the 9 next tasks, getting to 27 total.
+
+
