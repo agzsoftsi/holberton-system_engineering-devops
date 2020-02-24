@@ -6,6 +6,8 @@ This project is NOT mandatory at all. It is 100% optional. Doing any part of thi
 
 - Official Web page: [cmdchallenge](https://cmdchallenge.com/)
 
+![](cmdchallenge.fw.png)
+
 ## Requirements
 
 ### General
