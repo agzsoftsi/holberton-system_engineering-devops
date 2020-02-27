@@ -96,3 +96,22 @@ julien@ubuntu:~$ pwd
 julien@ubuntu:~$ 
 ```
 
+3. The long format
+
+File: [3-listfiles](3-listfiles/)
+
+Display current directory contents in a long format
+
+Example:
+```
+$ ./3-listfiles
+total 32
+-rwxr-xr-x@ 1 sylvain staff 18 Jan 25 00:19 0-current_working_directory
+-rwxr-xr-x@ 1 sylvain staff 19 Jan 25 00:23 1-listit
+-rwxr-xr-x@ 1 sylvain staff 18 Jan 25 00:29 2-bring_me_home
+-rwxr-xr-x@ 1 sylvain staff 18 Jan 25 00:39 3-listfiles
+$
+```
+
+
+
