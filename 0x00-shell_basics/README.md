@@ -52,6 +52,7 @@ julien@ubuntu:/tmp$
 # TASKs
 
 0. Where am I? mandatory
+
 File: [0-current_working_directory](0-current_working_directory/)
 
 Write a script that prints the absolute path name of the current working directory.
@@ -62,3 +63,18 @@ $ ./0-current_working_directory
 /Users/holbertonschool/holbertonschool-sysadmin_devops/0x00-shell_basics
 $
 ```
+
+1. What’s in there? mandatory
+
+File: [1-listit](1-listit/)
+
+Display the contents list of your current directory.
+
+Example:
+```
+$ ./1-listit
+Applications    Documents   Dropbox Movies Pictures
+Desktop Downloads   Library Music Public
+$
+```
+
