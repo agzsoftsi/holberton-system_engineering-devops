@@ -172,3 +172,17 @@ $ file /tmp/holberton/
 /tmp/holberton/: directory
 $
 ```
+
+7. Betty in Holberton mandatory
+
+File: [7-movethatfile](7-movethatfile/)
+
+Move the file betty from /tmp/ to /tmp/holberton.
+
+Example:
+```
+$ ./7-movethatfile
+$ ls /tmp/holberton/
+betty
+$
+```
