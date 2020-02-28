@@ -186,3 +186,19 @@ $ ls /tmp/holberton/
 betty
 $
 ```
+
+
+8. Bye bye Betty mandatory
+
+File: [8-firstdelete](8-firstdelete/)
+
+Delete the file betty.
+
+The file betty is in /tmp/holberton
+
+Example:
+```
+$ ./8-firstdelete
+$ ls /tmp/holberton/
+$
+```
