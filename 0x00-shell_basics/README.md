@@ -217,3 +217,25 @@ $ file /tmp/holberton
 /tmp/holberton: cannot open `/tmp/holberton' (No such file or directory)
 $
 ```
+
+
+10. Back to the future mandatory
+
+File: [10-back](10-back/)
+
+Write a script that changes the working directory to the previous one.
+```
+julien@ubuntu:/tmp$ pwd
+/tmp
+julien@ubuntu:/tmp$ cd /var
+julien@ubuntu:/var$ pwd
+/var
+julien@ubuntu:/var$ source ./10-back
+/tmp
+julien@ubuntu:/tmp$ pwd
+/tmp
+```
+
+
+
+
