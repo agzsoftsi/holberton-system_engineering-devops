@@ -202,3 +202,18 @@ $ ./8-firstdelete
 $ ls /tmp/holberton/
 $
 ```
+
+
+9. Bye bye Holberton mandatory
+
+File:[9-firstdirdeletion](9-firstdirdeletion/) 
+
+Delete the directory holberton that is in the /tmp directory.
+
+Example:
+```
+$ ./9-firstdirdeletion
+$ file /tmp/holberton
+/tmp/holberton: cannot open `/tmp/holberton' (No such file or directory)
+$
+```
