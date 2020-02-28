@@ -320,3 +320,70 @@ drwxrwxr-x 3 ubuntu ubuntu 4096 Sep 20 03:33 ..
 -rw-rw-r-- 1 ubuntu ubuntu    0 Sep 20 03:32 Holberton
 -rw-rw-r-- 1 ubuntu ubuntu    0 Sep 20 03:32 Notrebloh
 ```
+
+
+16. Clean Emacs mandatory
+
+File: [16-clean_emacs](16-clean_emacs)
+
+Create a script that deletes all files in the current working directory that end with the character ~.
+```
+ubuntu@ip-172-31-63-244:/tmp/sym$ ls
+main.c  main.c~  Makefile~
+ubuntu@ip-172-31-63-244:/tmp/sym$ ./16-clean_emacs
+ubuntu@ip-172-31-63-244:/tmp/emacs$ ls
+main.c
+ubuntu@ip-172-31-63-244:/tmp/emacs$
+```
+
+17. Tree mandatory
+
+File: [17-tree](17-tree/)
+
+Create a script that creates the directories welcome/, welcome/to/ and welcome/to/holberton in the current directory.
+
+- You are only allowed to use two spaces in your script, not more.
+
+```
+julien@ubuntu:/tmp/h$ ls -l
+total 4
+-rwxrw-r-- 1 julien julien 44 Sep 20 12:09 17-tree
+julien@ubuntu:/tmp/h$ wc -l 17-tree 
+2 17-tree
+julien@ubuntu:/tmp/h$ head -1 17-tree 
+#!/bin/bash
+julien@ubuntu:/tmp/h$ tr -cd ' ' < 17-tree | wc -c # you do not have to understand this yet, but the result should be 2, 1 or 0
+2
+julien@ubuntu:/tmp/h$ ./17-tree 
+julien@ubuntu:/tmp/h$ ls
+17-tree  welcome
+julien@ubuntu:/tmp/h$ ls welcome/
+to
+julien@ubuntu:/tmp/h$ ls -l welcome/to
+total 4
+drwxrwxr-x 2 julien julien 4096 Sep 20 12:11 holberton
+julien@ubuntu:/tmp/h$ 
+```
+
+18. Life is a series of commas, not periods mandatory
+
+Score: 100.00% (Checks completed: 100.00%)
+Write a command that lists all the files and directories of the current directory, separated by commas (,).
+
+Directory names should end with a slash (/)
+Files and directories starting with a dot (.) should be listed
+The listing should be alpha ordered, except for the directories . and .. which should be listed at the very beginning
+Only digits and letters are used to sort; Digits should come first
+You can assume that all the files we will test with will have at least one letter or one digit
+The listing should end with a new line
+```
+ubuntu@ip-172-31-63-244:~/holbertonschool$ ls -a
+
+.  ..  0-commas  0-commas-checks  1-empty_casks  2-gifs  3-directories  4-zeros  5-rot13  6-odd  7-sort_rot13  Makefile  quote  .test  test_dir  test.var
+
+ubuntu@ip-172-31-63-244:~/holbertonschool$ ./18-commas
+
+./, ../, 0-commas, 0-commas-checks/, 1-empty_casks, 2-gifs, 3-directories, 4-zeros, 5-rot13, 6-odd, 7-sort_rot13, Makefile, quote, .test, test_dir/, test.var
+
+ubuntu@ip-172-31-63-244:~/holbertonschool$
+```
