@@ -285,3 +285,38 @@ Create a script that copies all the HTML files from the current working director
 - You can consider that all HTML files have the extension .html
 
 
+15. Let’s move mandatory
+
+File: [15-lets_move](15-lets_move/)
+
+Create a script that moves all files beginning with an uppercase letter to the directory /tmp/u.
+
+- You can assume that the directory /tmp/u will exist when we will run your script
+
+```
+ubuntu@ip-172-31-63-244:/tmp/sym$ ls -la
+total 148
+drwxrwxr-x  3 ubuntu ubuntu   4096 Sep 20 03:33 .
+drwxrwxrwt 12 root   root   139264 Sep 20 03:26 ..
+-rw-rw-r--  1 ubuntu ubuntu      0 Sep 20 03:32 Holberton
+lrwxrwxrwx  1 ubuntu ubuntu      7 Sep 20 03:24 __ls__ -> /bin/ls
+-rw-rw-r--  1 ubuntu ubuntu      0 Sep 20 03:32 Notrebloh
+-rw-rw-r--  1 ubuntu ubuntu      0 Sep 20 03:32 random_file
+ubuntu@ip-172-31-63-244:/tmp/sym$ ls -la /tmp/u
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Sep 20 03:33 .
+drwxrwxr-x 3 ubuntu ubuntu 4096 Sep 20 03:33 ..
+ubuntu@ip-172-31-63-244:/tmp/sym$ ./15-lets_move
+ubuntu@ip-172-31-63-244:/tmp/sym$ ls -la
+total 148
+drwxrwxr-x  3 ubuntu ubuntu   4096 Sep 20 03:33 .
+drwxrwxrwt 12 root   root   139264 Sep 20 03:26 ..
+lrwxrwxrwx  1 ubuntu ubuntu      7 Sep 20 03:24 __ls__ -> /bin/ls
+-rw-rw-r--  1 ubuntu ubuntu      0 Sep 20 03:32 random_file
+ubuntu@ip-172-31-63-244:/tmp/sym$ ls -la /tmp/u
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Sep 20 03:33 .
+drwxrwxr-x 3 ubuntu ubuntu 4096 Sep 20 03:33 ..
+-rw-rw-r-- 1 ubuntu ubuntu    0 Sep 20 03:32 Holberton
+-rw-rw-r-- 1 ubuntu ubuntu    0 Sep 20 03:32 Notrebloh
+```
