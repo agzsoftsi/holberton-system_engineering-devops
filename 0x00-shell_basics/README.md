@@ -159,3 +159,16 @@ $
 ```
 
 
+6. Welcome Holberton mandatory
+
+File: [6-firstdirectory](6-firstdirectory/)
+
+Create a script that creates a directory named holberton in the /tmp/ directory.
+
+Example:
+```
+$ ./6-firstdirectory
+$ file /tmp/holberton/
+/tmp/holberton/: directory
+$
+```
