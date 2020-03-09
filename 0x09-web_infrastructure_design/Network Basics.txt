@@ -2,7 +2,7 @@
 
 Networking is a big part of what made computers so powerful and why the Internet exists. It allows machines to communicate with each other.
 
-## What is a protocol?
+# What is a protocol?
 Network protocols are sets of established rules that dictate how to format, transmit and receive data so computer network devices -- from servers and routers to endpoints -- can communicate regardless of the differences in their underlying infrastructures, designs or standards.
 
 To successfully send and receive information, devices on both sides of a communication exchange must accept and follow protocol conventions. Support for network protocols can be built into software, hardware or both.
@@ -85,3 +85,90 @@ Some other network protocol examples include:
 - User Datagram Protocol(UDP)
 - Voice over IP
 - X10
+
+
+# What is an IP address?
+
+Every machine on a network has a unique identifier. Just as you would address a letter to send in the mail, computers use the unique identifier to send data to specific computers on a network. Most networks today, including all computers on the Internet, use the TCP/IP protocol as the standard for how to communicate on the network. In the TCP/IP protocol, the unique identifier for a computer is called its IP address.
+
+There are two standards for IP addresses: IP Version 4 (IPv4) and IP Version 6 (IPv6). All computers with IP addresses have an IPv4 address, and many are starting to use the new IPv6 address system as well. Here's what these two address types mean:
+
+- IPv4 uses 32 binary bits to create a single unique address on the network. An IPv4 address is expressed by four numbers separated by dots. Each number is the decimal (base-10) representation for an eight-digit binary (base-2) number, also called an octet. For example: 216.27.61.137
+
+- IPv6 uses 128 binary bits to create a single unique address on the network. An IPv6 address is expressed by eight groups of hexadecimal (base-16) numbers separated by colons, as in 2001:cdba:0000:0000:0000:0000:3257:9652. Groups of numbers that contain all zeros are often omitted to save space, leaving a colon separator to mark the gap (as in 2001:cdba::3257:9652).
+At the dawn of IPv4 addressing, the Internet was not the large commercial sensation it is today, and most networks were private and closed off from other networks around the world. When the Internet exploded, having only 32 bits to identify a unique Internet address caused people to panic that we'd run out of IP addresses. Under IPv4, there are 232 possible combinations, which offers just under 4.3 billion unique addresses. IPv6 raised that to a panic-relieving 2128 possible addresses. Later, we'll take a closer look at how to understand your computer's IPv4 or IPv6 addresses.
+
+How does your computer get its IP address? An IP address can be either dynamic or static. A static address is one that you configure yourself by editing your computer's network settings. This type of address is rare, and it can create network issues if you use it without a good understanding of TCP/IP. Dynamic addresses are the most common. They're assigned by the Dynamic Host Configuration Protocol (DHCP), a service running on the network. DHCP typically runs on network hardware such as routers or dedicated DHCP servers.
+
+Dynamic IP addresses are issued using a leasing system, meaning that the IP address is only active for a limited time. If the lease expires, the computer will automatically request a new lease. Sometimes, this means the computer will get a new IP address, too, especially if the computer was unplugged from the network between leases. This process is usually transparent to the user unless the computer warns about an IP address conflict on the network (two computers with the same IP address). An address conflict is rare, and today's technology typically fixes the problem automatically.
+
+Next, let's take a closer look at the important parts of an IP address and the special roles of certain addresses.
+
+
+## IP Classes
+  
+Earlier, you read that IPv4 addresses represent four eight-digit binary numbers. That means that each number could be 00000000 to 11111111 in binary, or 0 to 255 in decimal (base-10). In other words, 0.0.0.0 to 255.255.255.255. However, some numbers in that range are reserved for specific purposes on TCP/IP networks. These reservations are recognized by the authority on TCP/IP addressing, the Internet Assigned Numbers Authority (IANA). Four specific reservations include the following:
+
+0.0.0.0 -- This represents the default network, which is the abstract concept of just being connected to a TCP/IP network.
+255.255.255.255 -- This address is reserved for network broadcasts, or messages that should go to all computers on the network.
+
+127.0.0.1 -- This is called the loopback address, meaning your computer's way of identifying itself, whether or not it has an assigned IP address.
+
+169.254.0.1 to 169.254.255.254 -- This is the Automatic Private IP Addressing (APIPA) range of addresses assigned automatically when a computer's unsuccessful getting an address from a DHCP server.
+The other IP address reservations are for subnet classes. A subnet is a smaller network of computers connected to a larger network through a router. The subnet can have its own address system so computers on the same subnet can communicate quickly without sending data across the larger network. A router on a TCP/IP network, including the Internet, is configured to recognize one or more subnets and route network traffic appropriately. The following are the IP addresses 
+reserved for subnets:
+
+10.0.0.0 to 10.255.255.255 -- This falls within the Class A address range of 1.0.0.0 to 127.0.0.0, in which the first bit is 0.
+
+172.16.0.0 to 172.31.255.255 -- This falls within the Class B address range of 128.0.0.0 to 191.255.0.0, in which the first two bits are 10.
+
+192.168.0.0 to 192.168.255.255 -- This falls within the Class C range of 192.0.0.0 through 223.255.255.0, in which the first three bits are 110.
+
+Multicast (formerly called Class D) -- The first four bits in the address are 1110, with addresses ranging from 224.0.0.0 to 239.255.255.255.
+
+Reserved for future/experimental use (formerly called Class E) -- addresses 240.0.0.0 to 254.255.255.254.
+The first three (within Classes A, B and C) are those most used in creating subnets. Later, we'll see how a subnet uses these addresses. The IANA has outlined specific uses for multicast addresses within Internet Engineering Task Force (IETF) document RFC 5771. However, it hasn't designated a purpose or future plan for Class E addresses since it reserved the block in its 1989 document RFC 1112. Before IPv6, the Internet was filled with debate about whether the IANA should release Class E for general use.
+
+Next, let's see how subnets work and find out who has those non-reserved IP addresses out on the Internet.
+
+## HOW DHCP ASSIGNS ADDRESSES
+
+When you add a computer to a network, that computer uses a four-step process to get an IP address from DHCP:
+
+- Discover -- The computer sends out a broadcast message on the network, hoping to discover a DHCP service provider.
+- Offer -- Each DHCP provider hears the message, recognizes the unique hardware address of the computer, and sends a - message back offering its services to that computer.
+- Request -- The computer selects a DHCP provider from its offerings and then sends a request to that provider asking for an IP address assignment.
+- Acknowledge -- The targeted DHCP provider acknowledges the request and issues an IP address to the computer that doesn't match any other IP addresses currently active on the network.
+
+
+## Internet Addresses and Subnets
+  
+The following is an example of a subnet IP address you might have on your computer at home if you're using a router (wireless or wired) between your ISP connection and your computer:
+
+- IP address: 192.168.1.102
+- Subnet mask: 255.255.255.0
+- Twenty-four bits (three octets) reserved for network identity
+- Eight bits (one octet) reserved for nodes
+- Subnet identity based on subnet mask (first address): 192.168.1.0
+- The reserved broadcast address for the subnet (last address): 192.168.1.255
+- Example addresses on the same network: 192.168.1.1, 192.168.1.103
+- Example addresses not on the same network: 192.168.2.1, 192.168.2.103
+- Besides reserving IP addresses, the IANA is also responsible for assigning blocks of IP addresses to certain entities, - usually commercial or government organizations. Your Internet service provider (ISP) may be one of these entities, or it - may be part of a larger block under the control of one of those entities. In order for you to connect to the Internet, - your ISP will assign you one of these addresses. You can see a full list of IANA assignments and reservations for IPv4 addresses.
+
+If you only connect one computer to the Internet, that computer can use the address from your ISP. Many homes today, though, use routers to share a single Internet connection between multiple computers. Wireless routers have become especially popular in recent years, avoiding the need to run network cables between rooms.
+
+If you use a router to share an Internet connection, the router gets the IP address issued directly from the ISP. Then, it creates and manages a subnet for all the computers connected to that router. If your computer's address falls into one of the reserved subnet ranges listed earlier, you're going through a router rather than connecting directly to the Internet.
+
+IP addresses on a subnet have two parts: network and node. The network part identifies the subnet itself. The node, also called the host, is an individual piece of computer equipment connected to the network and requiring a unique address. Each computer knows how to separate the two parts of the IP address by using a subnet mask. A subnet mask looks somewhat like an IP address, but it's actually just a filter used to determine which part of an IP address designates the network and node.
+
+A subnet mask consists of a series of 1 bits followed by a series of 0 bits. The 1 bits indicate those that should mask the network bits in the IP address, revealing only those that identify a unique node on that network. In the IPv4 standard, the most commonly used subnet masks have complete octets of 1s and 0s as follows:
+
+- 255.0.0.0.0 = 11111111.00000000.00000000.00000000 = eight bits for networks, 24 bits for nodes
+- 255.255.0.0 = 11111111.11111111.00000000.00000000 = 16 bits for networks, 16 bits for nodes
+- 255.255.255.0 = 11111111. 11111111.11111111.00000000 = 24 bits for networks, eight bits for nodes
+
+People who set up large networks determine what subnet mask works best based on the number of desired subnets or nodes. For more subnets, use more bits for the network; for more nodes per subnet, use more bits for the nodes. This may mean using non-standard mask values. For instance, if you want to use 10 bits for networks and 22 for nodes, your subnet mask value would require using 11000000 in the second octet, resulting in a subnet mask value of 255.192.0.0.
+
+Another important thing to note about IP addresses in a subnet is that the first and last addresses are reserved. The first address identifies the subnet itself, and the last address identifies the broadcast address for systems on that subnet.
+
+See the sidebar on the previous page for a look at how all this information comes together to form your IP address. For even more information about IP addresses, the Internet and related networking topics, head on to the next page.
