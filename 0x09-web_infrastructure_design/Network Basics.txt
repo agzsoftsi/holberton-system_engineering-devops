@@ -172,3 +172,124 @@ People who set up large networks determine what subnet mask works best based on 
 Another important thing to note about IP addresses in a subnet is that the first and last addresses are reserved. The first address identifies the subnet itself, and the last address identifies the broadcast address for systems on that subnet.
 
 See the sidebar on the previous page for a look at how all this information comes together to form your IP address. For even more information about IP addresses, the Internet and related networking topics, head on to the next page.
+
+
+# TCP/IP (Transmission Control Protocol/Internet Protocol)
+Posted by: Margaret Rouse
+WhatIs.com
+Contributor(s): Linda Rosencrance and Kate Gerwig
+
+TCP/IP, or the Transmission Control Protocol/Internet Protocol, is a suite of communication protocols used to interconnect network devices on the internet. TCP/IP can also be used as a communications protocol in a private computer network (an intranet or an extranet).
+
+The entire Internet Protocol suite -- a set of rules and procedures -- is commonly referred to as TCP/IP, though others are included in the suite. The TCP/IP protocol suite functions as an abstraction layer between internet applications and the routing/switching fabric.
+
+TCP/IP specifies how data is exchanged over the internet by providing end-to-end communications that identify how it should be broken into packets, addressed, transmitted, routed and received at the destination. TCP/IP requires little central management, and it is designed to make networks reliable, with the ability to recover automatically from the failure of any device on the network.
+
+The two main protocols in the Internet Protocol suite serve specific functions. TCP defines how applications can create channels of communication across a network. It also manages how a message is assembled into smaller packets before they are then transmitted over the internet and reassembled in the right order at the destination address.
+
+IP defines how to address and route each packet to make sure it reaches the right destination. Each gateway computer on the network checks this IP address to determine where to forward the message.
+
+A subnet mask is what tells a computer, or other network device, what portion of the IP address is used to represent the network and what part is used to represent hosts (other computers) on the network.
+
+
+A Network Address Translator (NAT) is the virtualization of Internet Protocol addresses. NAT helps improve security and decrease the number of IP addresses an organization needs.
+
+Common types of TCP/IP include the following:
+
+- HTTP (Hyper Text Transfer Protocol) handles the communication between a web server and a web browser.
+- HTTPS (Secure HTTP) handles secure communication between a web server and a web browser.
+- FTP (File Transfer Protocol) handles transmission of files between computers.
+
+## How TCP/IP works
+
+TCP/IP uses the client-server model of communication in which a user or machine (a client) is provided a service (like sending a webpage) by another computer (a server) in the network.
+
+Collectively, the TCP/IP suite of protocols is classified as stateless, which means each client request is considered new because it is unrelated to previous requests. Being stateless frees up network paths so they can be used continuously.
+
+The transport layer itself, however, is stateful. It transmits a single message, and its connection remains in place until all the packets in a message have been received and reassembled at the destination.
+
+The TCP/IP model differs slightly from the seven-layer Open Systems Interconnection (OSI) networking model designed after it. The OSI reference model defines how applications can communicate over a network.
+TCP/IP model layers
+
+TCP/IP functionality is divided into four layers, each of which include specific protocols:
+
+- The application layer provides applications with standardized data exchange. Its protocols include the HTTP, FTP, Post Office Protocol 3 (POP3), Simple Mail Transfer Protocol (SMTP) and Simple Network Management Protocol (SNMP). At the application layer, the payload is the actual application data.
+- The transport layer is responsible for maintaining end-to-end communications across the network. TCP handles communications between hosts and provides flow control, multiplexing and reliability. The transport protocols include TCP and User Datagram Protocol (UDP), which is sometimes used instead of TCP for special purposes.
+- The network layer, also called the internet layer, deals with packets and connects independent networks to transport the packets across network boundaries. The network layer protocols are the IP and the Internet Control Message Protocol (ICMP), which is used for error reporting.
+- The physical layer, also known as the network interface layer or data link layer, consists of protocols that operate only on a link -- the network component that interconnects nodes or hosts in the network. The protocols in this lowest layer include Ethernet for local area networks (LANs) and the Address Resolution Protocol (ARP).
+
+### Importance of TCP/IP
+
+TCP/IP is nonproprietary and, as a result, is not controlled by any single company. Therefore, the Internet Protocol suite can be modified easily. It is compatible with all operating systems, so it can communicate with any other system. The Internet Protocol suite is also compatible with all types of computer hardware and networks
+
+TCP/IP is highly scalable and, as a routable protocol, can determine the most efficient path through the network. It is widely used in current internet architecture.
+The history of TCP/IP
+
+The Defense Advanced Research Projects Agency (DARPA), the research branch of the U.S. Department of Defense, created the TCP/IP model in the 1970s for use in ARPANET, a wide area network that preceded the internet. TCP/IP was originally designed for the Unix operating system, and it has been built into all of the operating systems that came after it.
+
+The TCP/IP model and its related protocols are now maintained by the Internet Engineering Task Force.
+TCP/IP vs. OSI model
+
+TCP/IP and OSI are the most widely used communication networking protocols. The main difference is that OSI is a conceptual model that's not practically used for communication. Rather, it defines how applications can communicate over a network. TCP/IP, on the other hand, is widely used to establish links and network interaction.
+
+The TCP/IP protocols lay out standards on which the internet was created, while the OSI model provides guidelines on how communication has to be done. Therefore, TCP/IP is a more practical model.
+
+The TCP/IP and OSI models have similarities and differences. The main similarity is in the way they are constructed as both use layers, although the TCP/IP consists of just four layers, while the OSI model consists of seven layers.
+
+These are the seven layers of the OSI model:
+
+- Layer 7, the application layer, lets the user (software or human) interact with the application or network when the user wants to read messages, transfer files or engage in other network-related activities.
+- Layer 6, the presentation layer, translates or formats data for the application layer based on the semantics or syntax that the app accepts.
+- Layer 5, the session layer, sets up, coordinates and terminates conversations between apps.
+- Layer 4, the transport layer, handles transferring data across a network and providing error-checking mechanisms and data flow controls.
+- Layer 3, the network layer, moves data into and through other networks.
+- Layer 2, the data-link layer, handles problems that occur as a result of bit transmission errors.
+- Layer 1, the physical layer, transports data using electrical, mechanical or procedural interfaces.
+
+The upper layer for both the TCP/IP model and the OSI model is the application layer. Although this layer performs the same tasks in each model, those tasks may vary depending on the data each receives.
+
+
+The functions performed in each model are also similar because each uses a network layer and transport to operate. The TCP/IP and OSI models are each mostly used to transmit data packets. Although they will do so by different means and by different paths, they will still reach their destinations.
+
+The similarities between the TCP/IP model and the OSI model include the following:
+
+- They are both logical models.
+- They define networking standards.
+- They divide the network communication process in layers.
+- They provide frameworks for creating and implementing networking standards and devices.
+- They enable one manufacturer to make devices and network components that can coexist and work with the devices and components made by other manufacturers.
+
+The differences between the TCP/IP model and the OSI model include the following:
+
+- TCP/IP uses just one layer (application) to define the functionalities of the upper layers, while the OSI model uses three layers (application, presentation and session).
+- The TCP/IP model uses one layer (link) to define the functionalities of the bottom layers, while the OSI uses two layers (physical and data link).
+- The TCP/IP model use the internet layer to define the routing standards and protocols, while OSI uses the network layer.
+- The TCP/IP header size is 20 bytes while the OSI header is 5 bytes.
+- The TCP/IP model is a protocol-oriented standard, whereas the OSI model is a generic model based on the functionalities of each layer.
+- TCP/IP follows a horizontal approach, while OSI follows a vertical approach.
+- In the TCP/IP suite, the protocols were developed first, and then the model was developed. In OSI, the model was developed first, and then the protocols in each layer were developed.
+- TCP/IP helps establish a connection between different types of computers, whereas the OSI model helps standardize routers, switches, motherboards and other hardware.
+
+### Uses of TCP/IP
+
+TCP/IP can be used to provide remote login over the network, for interactive file transfer, to deliver email, to deliver webpages over the network and to remotely access a server host's file system.
+Pros and cons of TCP/IP
+
+The advantages of using the TCP/IP model include the following:
+
+- helps establish a connection between different types of computers;
+- works independently of the operating system;
+- supports many routing protocols;
+- has client-server architecture that is highly scalable;
+- can be operated independently;
+- supports several routing protocols; and
+- is lightweight and doesn't place unnecessary strain on a network or computer.
+
+The disadvantages of TCP/IP include the following:
+
+- complicated to set up and manage;
+- transport layer doesn't guarantee delivery of packets;
+- not easy to replace protocols in TCP/IP;
+- doesn't clearly separate the concepts of services, interfaces and protocols so not good for describing new technologies in new networks; and
+- especially vulnerable to a SYN (synchronization) attack, which is a type of denial-of-service attack in which a bad actor uses TCP/IP protocol.
+
