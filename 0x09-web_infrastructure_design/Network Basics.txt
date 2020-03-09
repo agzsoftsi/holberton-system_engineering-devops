@@ -1,0 +1,87 @@
+# Network basics
+
+Networking is a big part of what made computers so powerful and why the Internet exists. It allows machines to communicate with each other.
+
+## What is a protocol?
+Network protocols are sets of established rules that dictate how to format, transmit and receive data so computer network devices -- from servers and routers to endpoints -- can communicate regardless of the differences in their underlying infrastructures, designs or standards.
+
+To successfully send and receive information, devices on both sides of a communication exchange must accept and follow protocol conventions. Support for network protocols can be built into software, hardware or both.
+
+Standardized network protocols provide a common language for network devices. Without them, computers wouldn't know how to engage with each other. As a result, except for specialty networks built around a specific architecture, few networks would be able to function, and the internet as we know it wouldn't exist. Virtually all network end users rely on network protocols for connectivity.
+
+## How network protocols work
+
+Network protocols break larger processes into discrete, narrowly defined functions and tasks across every level of the network. In the standard model, known as the Open Systems Interconnection (OSI) model, one or more network protocols govern activities at each layer in the telecommunication exchange.
+
+A set of cooperating network protocols is called a protocol suite. The TCP/IP suite includes numerous protocols across layers -- such as the data, network, transport and application layers -- working together to enable internet connectivity. These include:
+
+- Transmission Control Protocol (TCP), which uses a set of rules to exchange messages with other internet points at the information packet level;
+- User Datagram Protocol (UDP), which acts as an alternative communication protocol to TCP and is used to establish low-latency and loss-tolerating connections between applications and the Internet.
+- Internet Protocol (IP), which uses a set of rules to send and receive messages at the Internet address level; and
+- Additional network protocols that include the Hypertext Transfer Protocol (HTTP) and File Transfer Protocol (FTP), each of which has defined sets of rules to exchange and display information.
+
+Every packet transmitted and received over a network contains binary data. Most protocols will add a header at the beginning of each packed in order to store information about the sender and the message's intended destination. Some protocols may also include a footer at the end with additional information. Network protocols process these headers and footers as part of the data moving among devices in order to identify messages of their own kind.
+
+## Network protocols are often set forth in an industry standard -- developed, defined and published by groups such as:
+
+- the International Telecommunication Union 
+- the Institute of Electrical and Electronics Engineers 
+- the Internet Engineering Task Force 
+- the International Organization for Standardization
+- the World Wide Web Consortium.
+- Major types of network protocols
+
+Generally speaking, networks have three types of protocols -- communication, such as Ethernet; management, such as the Simple Mail Transfer Protocol (SMTP); and security, such as Secure Shell (SSH).
+
+Falling into these three broad categories are thousands of network protocols that uniformly handle an extensive variety of defined tasks, including authentication, automation, correction, compression, error handling, file retrieval, file transfer, link aggregation, routing, semantics, synchronization and syntax.
+
+## Implementing network protocols
+
+In order for network protocols to work, they must be coded within software, either a part of the computer's operating system (OS) or as an application, or implemented within the computer's hardware. Most modern operating systems possess built-in software services that are prepared to implement some network protocols. Other applications, such as web browsers, are designed with software libraries that support whatever protocols are necessary for the application to function. Furthermore, TCP/IP and routing protocol support is implemented in direct hardware for enhanced performance.
+
+Whenever a new protocol is implemented, it is added to the protocol suite. The organization of protocol suites is considered to be monolithic since all protocols are stored in the same address and build on top of one another.
+
+## Vulnerabilities of network protocols
+
+One major vulnerability found in network protocols is that they are not designed for security. Their lack of protection can sometimes allow malicious attacks, such as eavesdropping and cache poisoning, to affect the system. The most common attack on network protocols is the advertisement of false routes, causing traffic to go through compromised hosts instead of the appropriate ones.
+
+Network protocol analyzers have been designed and installed in response to these vulnerabilities. Network protocol analyzers protect systems against malicious activity by supplementing firewalls, anti-virus programs and anti-spyware software.
+
+## Uses of network protocols
+
+Network protocols are what make the modern Internet possible since they allow computers to communicate across networks without users having to see or know what background operations are occurring. Some specific examples of network protocols and their uses are:
+
+- Post Office Protocol 3 (POP3), which is the most recent version of a standard protocol that is used for receiving incoming e-mails. Simple main transport Protocol, which is used to send and distribute outgoing e-mails.
+- File Transfer Protocol (FTP), which is used to transfer files from one machine to another.
+- Telnet, which is a collection of rules used to connect one system to another via a remote login. In this protocol, the system that send the request for connection is the local computer and the system that accepts the connection is the remote computer.
+
+Some other network protocol examples include:
+
+- Address Resolution Protocol (ARP)
+- Blocks Extensible Exchange Protocol (BEEP)
+- Border Gateway Protocol(BGP)
+- Binary Synchronous Communications (BSC)
+- Canonical Text Services(CTS)
+- Domain name system(DNS)
+- Dynamic Host Configuration Protocol(DHCP)
+- Enhanced Interior Gateway Routing Protocol(EIGRP)
+- HTTP over SSL
+- Human interface device
+- Internet Control Message Protocol(ICMP)
+- Internet Message Access Protocol(IMAP)
+- Gopher
+- Media access control
+- Network News Transfer Protocol(NNTP)
+- Open Shortest Path First
+- Post Office Protocol(POP)
+- Secure Sockets Layer
+- Simple Mail Transfer Protocol(SMTP)
+- Telnet
+- Terminal Network
+- Thread
+- Transmission Control Protocol(TCP)
+- Transport Layer Security
+- Universal Description, Discovery and Integration
+- User Datagram Protocol(UDP)
+- Voice over IP
+- X10
