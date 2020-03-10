@@ -175,9 +175,6 @@ See the sidebar on the previous page for a look at how all this information come
 
 
 # TCP/IP (Transmission Control Protocol/Internet Protocol)
-Posted by: Margaret Rouse
-WhatIs.com
-Contributor(s): Linda Rosencrance and Kate Gerwig
 
 TCP/IP, or the Transmission Control Protocol/Internet Protocol, is a suite of communication protocols used to interconnect network devices on the internet. TCP/IP can also be used as a communications protocol in a private computer network (an intranet or an extranet).
 
