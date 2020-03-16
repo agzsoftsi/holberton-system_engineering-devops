@@ -288,3 +288,25 @@ drwxr-x--x 2 betty holberton 4096 Sep 20 14:59 dir_holberton
 -rw-rw-r-- 1 betty holberton   23 Sep 20 14:25 hello
 julien@ubuntu:/tmp/h$
 ```
+
+
+15. Symbolic links mandatory - [15-symbolic_link_permissions](15-symbolic_link_permissions/)
+
+Write a script that changes the owner and the group owner of the file _hello to betty and holberton respectively.
+
+- The file _hello is in the working directory
+- The file _hello is a symbolic link
+```
+julien@ubuntu:/tmp/h$ ls -l
+total 24
+-rwxrwxr-x 1 julien julien   44 Sep 20 15:12 15-symbolic_link_permissions
+-rw-rw-r-- 1 julien julien   23 Sep 20 14:25 hello
+lrwxrwxrwx 1 julien julien    5 Sep 20 15:10 _hello -> hello
+julien@ubuntu:/tmp/h$ sudo ./15-symbolic_link_permissions 
+julien@ubuntu:/tmp/h$ ls -l
+total 24
+-rwxrwxr-x 1 julien julien      44 Sep 20 15:12 15-symbolic_link_permissions
+-rw-rw-r-- 1 julien julien      23 Sep 20 14:25 hello
+lrwxrwxrwx 1 betty  holberton    5 Sep 20 15:10 _hello -> hello
+julien@ubuntu:/tmp/h$ 
+```
