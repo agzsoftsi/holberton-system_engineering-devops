@@ -236,3 +236,30 @@ drwxr-x--x 2 julien julien 4096 Sep 20 14:59 dir_holberton
 -rw-rw-r-- 1 julien julien   23 Sep 20 14:25 hello
 julien@ubuntu:/tmp/h$ 
 ```
+
+
+13. Change group mandatory - [13-change_group](13-change_group/)
+
+Write a script that changes the group owner to holberton for the file hello
+
+- The file hello will be in the working directory
+```
+julien@ubuntu:/tmp/h$ ls -l
+total 24
+-rwxrwxr-x 1 julien julien   34 Sep 20 15:03 13-change_group
+drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir0
+drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir1
+drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir2
+drwxr-x--x 2 julien julien 4096 Sep 20 14:59 dir_holberton
+-rw-rw-r-- 1 julien julien   23 Sep 20 14:25 hello
+julien@ubuntu:/tmp/h$ sudo ./13-change_group 
+julien@ubuntu:/tmp/h$ ls -l
+total 24
+-rwxrwxr-x 1 julien julien      34 Sep 20 15:03 13-change_group
+drwx--x--x 2 julien julien    4096 Sep 20 14:49 dir0
+drwx--x--x 2 julien julien    4096 Sep 20 14:49 dir1
+drwx--x--x 2 julien julien    4096 Sep 20 14:49 dir2
+drwxr-x--x 2 julien julien    4096 Sep 20 14:59 dir_holberton
+-rw-rw-r-- 1 julien holberton   23 Sep 20 14:25 hello
+julien@ubuntu:/tmp/h$ 
+```
