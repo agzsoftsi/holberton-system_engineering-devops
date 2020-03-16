@@ -168,4 +168,24 @@ Write a script that sets the mode of the file hello to this:
 - You are not allowed to use commas for this script
 
 
+10. Look in the mirror mandatory - [10-mirror_permissions](10-mirror_permissions/)
 
+Write a script that sets the mode of the file hello the same as olleh’s mode.
+
+- The file hello will be in the working directory
+- The file olleh will be in the working directory
+```
+julien@ubuntu:/tmp/h$ ls -l
+total 8
+-rwxrw-r-- 1 julien julien 42 Sep 20 14:45 10-mirror_permissions
+-rwxr-x-wx 1 julien julien 23 Sep 20 14:25 hello
+-rw-rw-r-- 1 julien julien  0 Sep 20 14:43 olleh
+julien@ubuntu:/tmp/h$ ./10-mirror_permissions 
+julien@ubuntu:/tmp/h$ ls -l
+total 8
+-rwxrw-r-- 1 julien julien 42 Sep 20 14:45 10-mirror_permissions
+-rw-rw-r-- 1 julien julien 23 Sep 20 14:25 hello
+-rw-rw-r-- 1 julien julien  0 Sep 20 14:43 olleh
+julien@ubuntu:/tmp/h$ 
+```
+Note: the mode of olleh will not always be 664. Make sure your script works for any mode.
