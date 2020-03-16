@@ -19,7 +19,6 @@
 
 0. My name is Betty mandatory - [0-iam_betty](0-iam_betty/)
 
-Score: 100.00% (Checks completed: 100.00%)
 Create a script that changes your user ID to betty.
 
 - You should use exactly 8 characters for your command (+1 character for the new line)
@@ -34,7 +33,6 @@ julien@ubuntu:/tmp/h$
 
 1. Who am I mandatory - [1-who_am_i](1-who_am_i/)
 
-Score: 100.00% (Checks completed: 100.00%)
 Write a script that prints the effective userid of the current user.
 ```
 julien@ubuntu:/tmp/h$ ./1-who_am_i
@@ -45,7 +43,6 @@ julien@ubuntu:/tmp/h$
 
 2. Groups mandatory - [2-groups](2-groups/)
 
-Score: 100.00% (Checks completed: 100.00%)
 Write a script that prints all the groups the current user is part of.
 ```
 julien@ubuntu:/tmp/h$ ./2-groups
@@ -57,7 +54,6 @@ Note: depending on the user, you will get a different output.
 
 3. New owner mandatory - [3-new_owner](3-new_owner/)
 
-Score: 100.00% (Checks completed: 100.00%)
 Write a script that changes the owner of the file hello to the user betty.
 ```
 julien@ubuntu:/tmp/h$ ls -l
@@ -71,3 +67,9 @@ total 4
 -rw-rw-r-- 1 betty  julien  0 Sep 20 14:18 hello
 julien@ubuntu:/tmp/h$
 ```
+
+
+
+4. Empty! mandatory - [4-empty](4-empty/)
+
+Write a script that creates an empty file called hello.
