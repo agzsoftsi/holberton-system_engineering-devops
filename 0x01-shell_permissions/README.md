@@ -263,3 +263,28 @@ drwxr-x--x 2 julien julien    4096 Sep 20 14:59 dir_holberton
 -rw-rw-r-- 1 julien holberton   23 Sep 20 14:25 hello
 julien@ubuntu:/tmp/h$ 
 ```
+
+
+14. Owner and group mandatory - [14-change_owner_and_group](14-change_owner_and_group/)
+
+Write a script that changes the owner to betty and the group owner to holberton for all the files and directories in the working directory.
+```
+julien@ubuntu:/tmp/h$ ls -l
+total 24
+-rwxrwxr-x 1 julien julien   36 Sep 20 15:06 14-change_owner_and_group
+drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir0
+drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir1
+drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir2
+drwxr-x--x 2 julien julien 4096 Sep 20 14:59 dir_holberton
+-rw-rw-r-- 1 julien julien   23 Sep 20 14:25 hello
+julien@ubuntu:/tmp/h$ sudo ./14-change_owner_and_group 
+julien@ubuntu:/tmp/h$ ls -l
+total 24
+-rwxrwxr-x 1 betty holberton   36 Sep 20 15:06 14-change_owner_and_group
+drwx--x--x 2 betty holberton 4096 Sep 20 14:49 dir0
+drwx--x--x 2 betty holberton 4096 Sep 20 14:49 dir1
+drwx--x--x 2 betty holberton 4096 Sep 20 14:49 dir2
+drwxr-x--x 2 betty holberton 4096 Sep 20 14:59 dir_holberton
+-rw-rw-r-- 1 betty holberton   23 Sep 20 14:25 hello
+julien@ubuntu:/tmp/h$
+```
