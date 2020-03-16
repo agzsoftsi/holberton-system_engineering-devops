@@ -329,3 +329,8 @@ total 24
 -rw-rw-r-- 1 betty  julien      23 Sep 20 14:25 hello
 julien@ubuntu:/tmp/h$ 
 ```
+
+
+17. Star Wars #advanced - [100-Star_Wars](100-Star_Wars/)
+
+Write a script that will play the StarWars IV episode in the Terminal
