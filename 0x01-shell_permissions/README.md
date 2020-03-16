@@ -114,3 +114,23 @@ total 8
 -r-xr-xr-- 1 julien julien 23 Sep 20 14:25 hello
 julien@ubuntu:/tmp/h$ 
 ```
+
+
+7. Everybody! mandatory - [7-everybody](7-everybody/)
+
+Write a script that adds execution permission to the owner, the group owner and the other users, to the file hello
+
+The file hello will be in the working directory
+You are not allowed to use commas for this script
+```
+julien@ubuntu:/tmp/h$ ls -l
+total 8
+-rwxrw-r-- 1 julien julien 28 Sep 20 14:35 7-everybody
+-rw-r----- 1 julien julien 23 Sep 20 14:25 hello
+julien@ubuntu:/tmp/h$ ./7-everybody 
+julien@ubuntu:/tmp/h$ ls -l
+total 8
+-rwxrw-r-- 1 julien julien 28 Sep 20 14:35 7-everybody
+-rwxr-x--x 1 julien julien 23 Sep 20 14:25 hello
+julien@ubuntu:/tmp/h$ 
+```
