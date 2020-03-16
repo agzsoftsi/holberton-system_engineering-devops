@@ -189,3 +189,26 @@ total 8
 julien@ubuntu:/tmp/h$ 
 ```
 Note: the mode of olleh will not always be 664. Make sure your script works for any mode.
+
+
+11. Directories mandatory - [11-directories_permissions](11-directories_permissions/)
+
+Create a script that adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users. Regular files should not be changed.
+```
+julien@ubuntu:/tmp/h$ ls -l
+total 20
+-rwxrwxr-x 1 julien julien   24 Sep 20 14:53 11-directories_permissions
+drwx------ 2 julien julien 4096 Sep 20 14:49 dir0
+drwx------ 2 julien julien 4096 Sep 20 14:49 dir1
+drwx------ 2 julien julien 4096 Sep 20 14:49 dir2
+-rw-rw-r-- 1 julien julien   23 Sep 20 14:25 hello
+julien@ubuntu:/tmp/h$ ./11-directories_permissions 
+julien@ubuntu:/tmp/h$ ls -l
+total 20
+-rwxrwxr-x 1 julien julien   24 Sep 20 14:53 11-directories_permissions
+drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir0
+drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir1
+drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir2
+-rw-rw-r-- 1 julien julien   23 Sep 20 14:25 hello
+julien@ubuntu:/tmp/h$ 
+```
