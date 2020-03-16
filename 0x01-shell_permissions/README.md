@@ -94,3 +94,23 @@ total 8
 -rwxrw-r-- 1 julien julien 23 Sep 20 14:25 hello
 julien@ubuntu:/tmp/h$ 
 ```
+
+
+6. Multiple permissions mandatory - [6-multiple_permissions](6-multiple_permissions/)
+
+Write a script that adds execute permission to the owner and the group owner, and read permission to other users, to the file hello.
+
+The file hello will be in the working directory
+
+```
+julien@ubuntu:/tmp/h$ ls -l
+total 8
+-rwxrw-r-- 1 julien julien 36 Sep 20 14:31 6-multiple_permissions
+-r--r----- 1 julien julien 23 Sep 20 14:25 hello
+julien@ubuntu:/tmp/h$ ./6-multiple_permissions 
+julien@ubuntu:/tmp/h$ ls -l
+total 8
+-rwxrw-r-- 1 julien julien 36 Sep 20 14:31 6-multiple_permissions
+-r-xr-xr-- 1 julien julien 23 Sep 20 14:25 hello
+julien@ubuntu:/tmp/h$ 
+```
