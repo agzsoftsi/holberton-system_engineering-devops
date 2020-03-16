@@ -334,3 +334,19 @@ julien@ubuntu:/tmp/h$
 17. Star Wars #advanced - [100-Star_Wars](100-Star_Wars/)
 
 Write a script that will play the StarWars IV episode in the Terminal
+
+
+18. RTFM #advanced - [101-man_holberton](101-man_holberton/)
+
+Create a man page that looks exactly like this one and passes all checks.
+
+NOTE: A new line is not necessary at the end of this file, refer to the output of wc, as shown below.
+```
+ubuntu@ip-172-31-63-244:/tmp/man$ wc 101-man_holberton
+ 16  89 608 101-man_holberton
+ubuntu@ip-172-31-63-244:/tmp/man$ man ./101-man_holberton
+```
+
+![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/207/man_holberton.PNG)
+
+
