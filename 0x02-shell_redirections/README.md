@@ -478,3 +478,22 @@ _dovecot:*:214:6:Dovecot Administrator:/var/empty:/usr/bin/false
 _dpaudio:*:215:215:DP Audio:/var/empty:/usr/bin/false
 $
 ```
+
+
+17. I hate bins mandatory - [17-hidethisword](17-hidethisword/)
+
+Display all the lines in the file /etc/passwd that do not contain the pattern “bin”.
+```
+$ ./17-hidethisword
+##
+# User Database
+#
+# Note that this file is consulted directly only when the system is running
+# in single-user mode. At other times this information is provided by
+# Open Directory.
+#
+# See the opendirectoryd(8) man page for additional information about
+# Open Directory.
+##
+$
+```
