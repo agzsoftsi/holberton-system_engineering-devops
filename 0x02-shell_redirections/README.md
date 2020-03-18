@@ -532,3 +532,12 @@ julien@ubuntu:/tmp/0x02$ echo Chicago | ./20-hiago
 hiago
 julien@ubuntu:/tmp/0x02$ 
 ```
+
+21. esreveR mandatory - [21-reverse](21-reverse/)
+
+Write a script that reverse its input.
+```
+julien@ubuntu:/tmp/0x02$ echo "Reverse" | ./21-reverse 
+esreveR
+julien@ubuntu:/tmp/0x02$ 
+```
