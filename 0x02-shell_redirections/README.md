@@ -513,3 +513,12 @@ AcceptEnv LANG LC_*
 Subsystem   sftp    /usr/libexec/sftp-server
 $
 ```
+
+19. A to Z mandatory - [19-AZ](19-AZ/)
+
+Replace all characters A and c from input to Z and e respectively.
+```
+julien@ubuntu:/tmp/0x02$ echo 'Replace all characters `A` and `c` from input to `Z` and `e`.' | ./19-AZ 
+Replaee all eharaeters `Z` and `e` from input to `Z` and `e`.
+julien@ubuntu:/tmp/0x02$ 
+```
