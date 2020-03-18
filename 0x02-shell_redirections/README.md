@@ -192,4 +192,36 @@ total 20
 -rw-rw-r-- 1 julien julien 17 Jan 20 06:40 \*\\'"Holberton School"\'\\*$\?\*\*\*\*\*:)
 Holberton School$
 julien@production-503e7013:~/shell$
+
+
+8. Save current state of directory mandatory - [8-cwd_state](8-cwd_state/)
+
+- Write a script that writes into the file ls_cwd_content the result of the command ls -la. If the file ls_cwd_content - already exists, it should be overwritten. If the file ls_cwd_content does not exist, create it.
+```
+julien@ubuntu:/tmp/h$ ls -la
+total 20
+drwxrwxr-x  2 julien julien 4096 Sep 20 18:18 .
+drwxrwxrwt 13 root   root   4096 Sep 20 18:18 ..
+-rwxrw-r--  1 julien julien   36 Sep 20 18:18 8-cwd_state
+-rw-rw-r--  1 betty  julien   23 Sep 20 14:25 hello
+-rw-rw-r--  1 julien julien  926 Sep 20 17:52 iacta
+julien@ubuntu:/tmp/h$ ./8-cwd_state 
+julien@ubuntu:/tmp/h$ ls -la
+total 24
+drwxrwxr-x  2 julien julien 4096 Sep 20 18:18 .
+drwxrwxrwt 13 root   root   4096 Sep 20 18:18 ..
+-rwxrw-r--  1 julien julien   36 Sep 20 18:18 8-cwd_state
+-rw-rw-r--  1 betty  julien   23 Sep 20 14:25 hello
+-rw-rw-r--  1 julien julien  926 Sep 20 17:52 iacta
+-rw-rw-r--  1 julien julien  329 Sep 20 18:18 ls_cwd_content
+julien@ubuntu:/tmp/h$ cat ls_cwd_content 
+total 20
+drwxrwxr-x  2 julien julien 4096 Sep 20 18:18 .
+drwxrwxrwt 13 root   root   4096 Sep 20 18:18 ..
+-rwxrw-r--  1 julien julien   36 Sep 20 18:18 8-cwd_state
+-rw-rw-r--  1 betty  julien   23 Sep 20 14:25 hello
+-rw-rw-r--  1 julien julien  926 Sep 20 17:52 iacta
+-rw-rw-r--  1 julien julien    0 Sep 20 18:18 ls_cwd_content
+julien@ubuntu:/tmp/h$ 
+```
 ```
