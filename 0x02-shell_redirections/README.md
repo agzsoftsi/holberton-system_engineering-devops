@@ -307,3 +307,52 @@ total 0
 total 0
 julien@ubuntu:/tmp/h$ 
 ```
+
+
+11. Don't just count your directories, make your directories count mandatory - [11-directories](11-directories/)
+
+Write a script that counts the number of directories and sub-directories in the current directory.
+
+- The current and parent directories should not be taken into account
+- Hidden directories should be counted
+```
+julien@production-503e7013:~/shell/fun_with_the_shell$ ls -lRa
+.:
+total 32
+drwxrwxr-x 3 julien julien 4096 Jan 20 03:53 .
+drwxrwxr-x 3 julien julien 4096 Jan 20 02:58 ..
+-rwxr--r-- 1 julien julien 43 Jan 20 02:59 0-commas
+-rwxr--r-- 1 julien julien 47 Jan 20 02:50 1-empty_casks
+-rwxrw-r-- 1 julien julien 68 Jan 20 03:35 2-gifs
+-rwxrw-r-- 1 julien julien 47 Jan 20 03:53 3-directories
+-rw-rw-r-- 1 julien julien 14 Jan 20 03:35 Makefile
+drwxrwxr-x 4 julien julien 4096 Jan 20 03:42 test_dir
+
+./test_dir:
+total 16
+drwxrwxr-x 4 julien julien 4096 Jan 20 03:42 .
+drwxrwxr-x 3 julien julien 4096 Jan 20 03:53 ..
+-rw-rw-r-- 1 julien julien 0 Jan 20 03:40 .horrible_selfie.gif
+-rw-rw-r-- 1 julien julien 0 Jan 20 03:23 README.md
+-rw-rw-r-- 1 julien julien 0 Jan 20 03:17 docker.gif
+-rw-rw-r-- 1 julien julien 0 Jan 20 03:17 file.sh
+drwxrwxr-x 2 julien julien 4096 Jan 20 03:23 photos
+drwxrwxr-x 2 julien julien 4096 Jan 20 03:23 rep.gif
+
+./test_dir/photos:
+total 8
+drwxrwxr-x 2 julien julien 4096 Jan 20 03:23 .
+drwxrwxr-x 4 julien julien 4096 Jan 20 03:42 ..
+-rw-rw-r-- 1 julien julien 0 Jan 20 03:23 cat.gif
+-rw-rw-r-- 1 julien julien 0 Jan 20 03:22 index.html
+-rw-rw-r-- 1 julien julien 0 Jan 20 03:23 main.gif
+-rw-rw-r-- 1 julien julien 0 Jan 20 03:23 rudy_rigot.gif
+
+./test_dir/rep.gif:
+total 8
+drwxrwxr-x 2 julien julien 4096 Jan 20 03:23 .
+drwxrwxr-x 4 julien julien 4096 Jan 20 03:42 ..
+julien@production-503e7013:~/shell/fun_with_the_shell$ ./11-directories
+3
+julien@production-503e7013:~/shell/fun_with_the_shell$
+```
