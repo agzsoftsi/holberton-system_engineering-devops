@@ -497,3 +497,19 @@ $ ./17-hidethisword
 ##
 $
 ```
+
+
+18. Letters only please mandatory - [18-letteronly](18-letteronly/)
+
+Display all lines of the file /etc/ssh/sshd_config starting with a letter.
+
+- include capital letters as well
+```
+$ ./18-letteronly
+SyslogFacility AUTHPRIV
+AuthorizedKeysFile  .ssh/authorized_keys
+UsePrivilegeSeparation sandbox # Default for new installations.
+AcceptEnv LANG LC_*
+Subsystem   sftp    /usr/libexec/sftp-server
+$
+```
