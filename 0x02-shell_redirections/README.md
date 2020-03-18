@@ -104,3 +104,24 @@ daemon:*:1:1:System Services:/var/root:/usr/bin/false
 ::1 localhost
 $
 ```
+
+
+4. Last lines of a file mandatory - [4-lastlines](4-lastlines/)
+
+Display the last 10 lines of /etc/passwd
+
+Example:
+```
+$ ./4-lastlines
+_assetcache:*:235:235:Asset Cache Service:/var/empty:/usr/bin/false
+_coremediaiod:*:236:236:Core Media IO Daemon:/var/empty:/usr/bin/false
+_launchservicesd:*:239:239:_launchservicesd:/var/empty:/usr/bin/false
+_iconservices:*:240:240:IconServices:/var/empty:/usr/bin/false
+_distnote:*:241:241:DistNote:/var/empty:/usr/bin/false
+_nsurlsessiond:*:242:242:NSURLSession Daemon:/var/db/nsurlsessiond:/usr/bin/false
+_nsurlstoraged:*:243:243:NSURLStorage Daemon:/var/empty:/usr/bin/false
+_displaypolicyd:*:244:244:Display Policy Daemon:/var/empty:/usr/bin/false
+_astris:*:245:245:Astris Services:/var/db/astris:/usr/bin/false
+_krbfast:*:246:-2:Kerberos FAST Account:/var/empty:/usr/bin/false
+```
+Tips from Dora Korpar (Cohort 0 San Francisco): “Thinks of it as a cat, what is at the end of it?”
