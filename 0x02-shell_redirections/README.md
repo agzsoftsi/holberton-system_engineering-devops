@@ -356,3 +356,43 @@ julien@production-503e7013:~/shell/fun_with_the_shell$ ./11-directories
 3
 julien@production-503e7013:~/shell/fun_with_the_shell$
 ```
+
+
+12. What’s new mandatory - [12-newest_files](12-newest_files/)
+
+Create a script that displays the 10 newest files in the current directory.
+
+Requirements:
+
+- One file per line
+- Sorted from the newest to the oldest
+```
+alex@ubuntu:/tmp$ ls -l
+total 7
+-rwxr-xr-x 1 501 dialout  32 Sep 27 23:51 0-hello_world
+-rwxr-xr-x 1 501 dialout  46 Sep 28 11:09 10-no_more_js
+-rwxr-xr-x 1 501 dialout  43 Sep 28 11:19 11-directories
+-rwxr-xr-x 1 501 dialout  30 Sep 29 13:43 12-newest_files
+-rwxr-xr-x 1 501 dialout  28 Sep 27 23:54 1-confused_smiley
+-rwxr-xr-x 1 501 dialout  28 Sep 27 23:58 2-hellofile
+-rwxr-xr-x 1 501 dialout  39 Sep 27 23:58 3-twofiles
+-rwxr-xr-x 1 501 dialout  33 Sep 27 23:59 4-lastlines
+-rwxr-xr-x 1 501 dialout  33 Sep 28 00:00 5-firstlines
+-rwxr-xr-x 1 501 dialout  28 Sep 28 00:25 6-third_line
+-rwxr-xr-x 1 501 dialout 110 Sep 28 00:34 7-file
+-rwxr-xr-x 1 501 dialout  36 Sep 28 00:34 8-cwd_state
+-rwxr-xr-x 1 501 dialout  35 Sep 28 00:35 9-duplicate_last_line
+-rw-r--r-- 1 501 dialout  19 Sep 27 23:51 README.md
+alex@ubuntu:/tmp$ ./12-newest_files 
+12-newest_files
+11-directories
+10-no_more_js
+9-duplicate_last_line
+7-file
+8-cwd_state
+6-third_line
+5-firstlines
+4-lastlines
+3-twofiles
+alex@ubuntu:/tmp$
+```
