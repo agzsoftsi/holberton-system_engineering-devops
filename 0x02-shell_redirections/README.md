@@ -803,3 +803,64 @@ julien@ubuntu:/tmp/0x02$ ./102-acrostic < An\ Acrostic
 ELIZABETH
 julien@ubuntu:/tmp/0x02$ 
 ```
+
+
+26. The biggest fan #advanced - [103-the_biggest_fan](103-the_biggest_fan/)
+
+Write a script that parses web servers logs in TSV format as input and displays the 11 hosts or IP addresses which did the most requests.
+
+Order by number of requests, most active host or IP at the top
+You are not allowed to use grep, egrep, fgrep or rgrep
+Format:
+
+host    When possible, the hostname making the request. Uses the IP address if the hostname was unavailable.
+logname Unused, always -
+time    In seconds, since 1970
+method  HTTP method: GET, HEAD, or POST
+url Requested path
+response    HTTP response code
+bytes   Number of bytes in the reply
+Here is an example with one day of logs of the NASA website (1995).
+```
+julien@ubuntu:/tmp/0x02$ wget http://indeedeng.github.io/imhotep/files/nasa_19950801.tsv
+--2016-09-21 10:05:09--  http://indeedeng.github.io/imhotep/files/nasa_19950801.tsv
+Resolving indeedeng.github.io (indeedeng.github.io)... 151.101.52.133
+Connecting to indeedeng.github.io (indeedeng.github.io)|151.101.52.133|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://opensource.indeedeng.io/imhotep/files/nasa_19950801.tsv [following]
+--2016-09-21 10:05:09--  http://opensource.indeedeng.io/imhotep/files/nasa_19950801.tsv
+Resolving opensource.indeedeng.io (opensource.indeedeng.io)... 151.101.52.133
+Reusing existing connection to indeedeng.github.io:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 2339220 (2.2M) [text/tab-separated-values]
+Saving to: ‘nasa_19950801.tsv’
+
+nasa_19950801.tsv               100%[==========================================================>]   2.23M  1.02MB/s    in 2.2s    
+
+2016-09-21 10:05:11 (1.02 MB/s) - ‘nasa_19950801.tsv’ saved [2339220/2339220]
+
+julien@ubuntu:/tmp/0x02$ head nasa_19950801.tsv
+host    logname time    method  url response    bytes   referer useragent
+pppa006.compuserve.com  -   807256800   GET /images/launch-logo.gif 200 1713        
+vcc7.langara.bc.ca  -   807256804   GET /shuttle/missions/missions.html 200 8677        
+pppa006.compuserve.com  -   807256806   GET /history/apollo/images/apollo-logo1.gif 200 1173        
+thing1.cchem.berkeley.edu   -   807256870   GET /shuttle/missions/sts-70/sts-70-day-03-highlights.html  200 4705
+202.236.34.35   -   807256881   GET /whats-new.html 200 18936       
+bettong.client.uq.oz.au -   807256884   GET /history/skylab/skylab.html 200 1687        
+202.236.34.35   -   807256884   GET /images/whatsnew.gif    200 651     
+202.236.34.35   -   807256885   GET /images/KSC-logosmall.gif   200 1204        
+bettong.client.uq.oz.au -   807256900   GET /history/skylab/skylab.html 304 0   
+julien@ubuntu:/tmp/0x02$ ./103-the_biggest_fan < nasa_19950801.tsv 
+edams.ksc.nasa.gov
+130.110.74.81
+www-relay.pa-x.dec.com
+derec
+163.205.16.75
+piweba3y.prodigy.com
+poppy.hensa.ac.uk
+163.206.89.4
+gw1.att.com
+arc.dental.upenn.edu
+131.110.62.74
+julien@ubuntu:/tmp/0x02$ 
+```
