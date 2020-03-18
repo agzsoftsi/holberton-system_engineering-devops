@@ -638,3 +638,88 @@ whoopsie:/nonexistent
 www-data:/var/www
 julien@ubuntu:/tmp/0x02$ 
 ```
+
+23. Empty casks make the most noise #advanced - [100-empty_casks](100-empty_casks/)
+
+Write a command that finds all empty files and directories in the current directory and all sub-directories.
+
+- Only the names of the files and directories should be displayed (not the entire path)
+- Hidden files should be listed
+- One file name per line
+- The listing should end with a new line
+- You are not allowed to use basename, grep, egrep, fgrep or rgrep
+```
+ubuntu@ip-172-31-63-244:~/holbertonschool$ ls -laR
+.:
+total 64
+drwxrwxr-x 5 ubuntu ubuntu 4096 Oct  7 00:48 .
+drwxrwxr-x 7 ubuntu ubuntu 4096 Sep 29 21:36 ..
+-rwxrwxr-x 1 ubuntu ubuntu   56 Feb  8  2016 0-commas
+drwxrwxr-x 2 ubuntu ubuntu 4096 Feb  8  2016 0-commas-checks
+-rwxrwxr-x 1 ubuntu ubuntu   48 Feb  8  2016 1-empty_casks
+-rwxrwxr-x 1 ubuntu ubuntu   68 Feb  8  2016 2-gifs
+-rwxrwxr-x 1 ubuntu ubuntu   47 Feb  8  2016 3-directories
+-rwxrwxr-x 1 ubuntu ubuntu   41 Feb  8  2016 4-zeros
+-rwxrwxr-x 1 ubuntu ubuntu   43 Feb  8  2016 5-rot13
+-rwxrwxr-x 1 ubuntu ubuntu   25 Feb  8  2016 6-odd
+-rwxrwxr-x 1 ubuntu ubuntu   73 Feb  8  2016 7-sort_rot13
+-rw-rw-r-- 1 ubuntu ubuntu    0 Oct  7 00:46 ........gif
+-rw-rw-r-- 1 ubuntu ubuntu    0 Oct  7 00:47 ..hello.gif
+drwxrwxr-x 2 ubuntu ubuntu 4096 Oct  7 00:41 javascript
+-rw-rw-r-- 1 ubuntu ubuntu    0 Oct  7 00:48 Kris_is_awesome :)
+-rw-rw-r-- 1 ubuntu ubuntu   14 Feb  8  2016 Makefile
+-rw-rw-r-- 1 ubuntu ubuntu   69 Feb  8  2016 quote
+-rw-rw-r-- 1 ubuntu ubuntu    0 Oct  7 00:24 Rona_napping.gif
+-rw-rw-r-- 1 ubuntu ubuntu    0 Oct  6 23:59 root.gif
+-rw-rw-r-- 1 ubuntu ubuntu    0 Mar 24  2016 ..something
+drwxrwxr-x 3 ubuntu ubuntu 4096 Feb  8  2016 test_dir
+-rwxrwxr-x 1 ubuntu ubuntu   54 Feb  8  2016 test.var
+
+./0-commas-checks:
+total 16
+drwxrwxr-x 2 ubuntu ubuntu 4096 Feb  8  2016 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Oct  7 00:48 ..
+-rw-rw-r-- 1 ubuntu ubuntu 1361 Feb  8  2016 28-check.php
+-rw-rw-r-- 1 ubuntu ubuntu  481 Feb  8  2016 28-check.php~
+
+./javascript:
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Oct  7 00:41 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Oct  7 00:48 ..
+
+./test_dir:
+total 12
+drwxrwxr-x 3 ubuntu ubuntu 4096 Feb  8  2016 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Oct  7 00:48 ..
+-rw-rw-r-- 1 ubuntu ubuntu    0 Feb  8  2016 docker.gif
+-rw-rw-r-- 1 ubuntu ubuntu    0 Feb  8  2016 file.sh
+-rw-rw-r-- 1 ubuntu ubuntu    0 Feb  8  2016 .horrible_selfie.gif
+drwxrwxr-x 2 ubuntu ubuntu 4096 Feb  8  2016 photos
+-rw-rw-r-- 1 ubuntu ubuntu    0 Feb  8  2016 README.md
+
+./test_dir/photos:
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Feb  8  2016 .
+drwxrwxr-x 3 ubuntu ubuntu 4096 Feb  8  2016 ..
+-rw-rw-r-- 1 ubuntu ubuntu    0 Feb  8  2016 cat.gif
+-rw-rw-r-- 1 ubuntu ubuntu    0 Feb  8  2016 index.html
+-rw-rw-r-- 1 ubuntu ubuntu    0 Feb  8  2016 main.gif
+-rw-rw-r-- 1 ubuntu ubuntu    0 Feb  8  2016 rudy_rigot.gif
+ubuntu@ip-172-31-63-244:~/holbertonschool$ ./100-empty_casks
+Rona_napping.gif
+javascript
+root.gif
+..something
+Kris_is_awesome :)
+..hello.gif
+file.sh
+docker.gif
+README.md
+index.html
+main.gif
+cat.gif
+rudy_rigot.gif
+.horrible_selfie.gif
+........gif
+ubuntu@ip-172-31-63-244:~/holbertonschool$
+```
