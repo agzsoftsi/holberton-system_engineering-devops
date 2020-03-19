@@ -279,6 +279,7 @@ f$
 julien@production-503e7013:~/$
 ```
 
+
 15. What happens when you type ls *.c mandatory - [See Blog](https://www.linkedin.com/pulse/what-happens-when-you-type-ls-c-carlos-garcia)
 
 Write a blog post describing step by step what happens when you type ls *.c and hit Enter in your shell. Try to explain every step you know of, and give examples. A total beginner should understand what you have written.
