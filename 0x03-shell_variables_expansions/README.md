@@ -291,6 +291,7 @@ Write a blog post describing step by step what happens when you type ls *.c and 
 Write a blog post explaining what are hard and symbolic links on Linux, how to create them, and what is the difference between the two. Use examples to illustrate.
 
 
+
 17. Everyone is a proponent of strong encryption #advanced - [100-rot13](100-rot13/)
 
 Write a script that encodes and decodes text using the rot13 encryption. Assume ASCII.
