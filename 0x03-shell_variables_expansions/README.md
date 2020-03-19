@@ -287,3 +287,17 @@ Write a blog post describing step by step what happens when you type ls *.c and 
 16. What is the difference between a hard link and a symbolic link? mandatory - [See Blog](https://www.linkedin.com/pulse/what-difference-between-hard-link-symbolic-carlos-garcia)
 
 Write a blog post explaining what are hard and symbolic links on Linux, how to create them, and what is the difference between the two. Use examples to illustrate.
+
+
+17. Everyone is a proponent of strong encryption #advanced - [100-rot13](100-rot13/)
+
+Write a script that encodes and decodes text using the rot13 encryption. Assume ASCII.
+```
+julien@production-503e7013:~/shell/fun_with_the_shell$ cat quote
+"Everyone is a proponent of strong encryption."
+- Dorothy E. Denning
+julien@production-503e7013:~/shell/fun_with_the_shell$ ./100-rot13 < quote
+"Rirelbar vf n cebcbarag bs fgebat rapelcgvba."
+- Qbebgul R. Qraavat
+julien@production-503e7013:~/shell/fun_with_the_shell$
+```
