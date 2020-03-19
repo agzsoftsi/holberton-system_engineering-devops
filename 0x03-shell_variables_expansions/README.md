@@ -282,3 +282,8 @@ julien@production-503e7013:~/$
 15. What happens when you type ls *.c mandatory - [See Blog](https://www.linkedin.com/pulse/what-happens-when-you-type-ls-c-carlos-garcia)
 
 Write a blog post describing step by step what happens when you type ls *.c and hit Enter in your shell. Try to explain every step you know of, and give examples. A total beginner should understand what you have written.
+
+
+16. What is the difference between a hard link and a symbolic link? mandatory - [See Blog](https://www.linkedin.com/pulse/what-difference-between-hard-link-symbolic-carlos-garcia)
+
+Write a blog post explaining what are hard and symbolic links on Linux, how to create them, and what is the difference between the two. Use examples to illustrate.
