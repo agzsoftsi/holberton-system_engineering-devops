@@ -144,3 +144,10 @@ DESKTOP_SESSION=ubuntu
 [...]
 julien@ubuntu:/tmp/0x03$
 ```
+
+6. Local variable mandatory - [6-create_local_variable](6-create_local_variable/)
+
+Create a script that creates a new local variable.
+
+- Name: BETTY
+- Value: Holberton
