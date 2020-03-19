@@ -151,3 +151,10 @@ Create a script that creates a new local variable.
 
 - Name: BETTY
 - Value: Holberton
+
+7. Global variable mandatory - [7-create_global_variable](7-create_global_variable/)
+
+Create a script that creates a new global variable.
+
+- Name: HOLBERTON
+- Value: Betty
