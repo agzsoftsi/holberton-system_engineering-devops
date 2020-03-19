@@ -302,7 +302,6 @@ julien@production-503e7013:~/shell/fun_with_the_shell$ ./100-rot13 < quote
 julien@production-503e7013:~/shell/fun_with_the_shell$
 ```
 
-
 18. The eggs of the brood need to be an odd number #advanced - [101-odd](101-odd/)
 
 Write a script that prints every other line from the input, starting with the first line.
