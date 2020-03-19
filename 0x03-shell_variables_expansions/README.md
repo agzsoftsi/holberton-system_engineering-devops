@@ -352,3 +352,18 @@ usr
 vmlinuz
 ubuntu@ip-172-31-63-244:/$
 ```
+
+19. I'm an instant star. Just add water and stir. #advanced - [102-water_and_stir](102-water_and_stir/)
+
+Write a shell script that adds the two numbers stored in the environment variables WATER and STIR and prints the result.
+
+- WATER is in base water
+- STIR is in base stir.
+- The result should be in base behlnort
+```
+julien@production-503e7013:~$ export WATER="ewwatratewa"
+julien@production-503e7013:~$ export STIR="ti.itirtrtr"
+julien@production-503e7013:~$ ./102-water_and_stir
+holberton
+julien@production-503e7013:~$
+```
