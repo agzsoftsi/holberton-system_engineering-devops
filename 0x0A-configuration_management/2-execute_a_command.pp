@@ -1,5 +1,6 @@
-# Kill an active process with pkill command:
-#murder everything
-exec { 'killmenow':
-    command => '/usr/bin/pkill killmenow'
+# Using Puppet, create a manifest that kills a process named killmenow.
+
+exec { 'Killmenow':
+  command => 'pkill -f killmenow',
+  path    => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 }
