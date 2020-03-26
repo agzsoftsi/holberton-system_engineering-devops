@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-# Install nginx on your web-01 server and Configure Nginx server so that /redirect_me redirects to another page
-sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-sudo chmod '0777' /var/www/html/index.nginx-debian.html
-echo "Holberton School for the win!" > /var/www/html/index.nginx-debian.html
-sudo sed -i "/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;" /etc/nginx/sites-available/default
-sudo echo "Ceci n'est pas une page" > /usr/share/nginx/html/error_404.html
-sudo sed -i "/listen 80 default_server/a error_page 404 /eror_404.html; location = /error_404.html { root /usr/share/nginx/html; internal; }" /etc/nginx/sites-available/default
-sudo service nginx restart
+# Script that install nginx web server and creates a 404 error page
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo "Holberton School" > /var/www/html/index.html
+
+#Pago of 404 error
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+#Modify config
+sed -i "/listen 80 default_server/a error_page 404 /404.html;\nlocation = /404.html {\nroot /var/www/html;\n}" /etc/nginx/sites-available/default
+service nginx restart
