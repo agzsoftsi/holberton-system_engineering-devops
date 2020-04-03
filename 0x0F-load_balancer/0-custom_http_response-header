@@ -2,21 +2,21 @@
 # Configure Nginx so that its HTTP response contains a custom header (on web-01 and web-02)
 sudo apt-get -y update
 sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
 echo "Holberton School" > /var/www/html/index.html
-echo "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
 printf %s "server {
     listen 80;
     listen [::]:80 default_server;
     root   /var/www/html;
-    index  index.html index.htm;
-    add_header X-Served-By $HOSTNAME;
+    index index.html index.htm index.nginx-debian.html;
     location /redirect_me {
         return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
     }
     error_page 404 /404.html;
     location = /404.html {
-        root /usr/share/nginx/html;
         internal;
     }
+    add_header X-Served-By $HOSTNAME;
 }" > /etc/nginx/sites-available/default
-sudo service nginx restart
+sudo /etc/init.d/nginx restart
