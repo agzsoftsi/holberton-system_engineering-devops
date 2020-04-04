@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Task 0 Install HAProxy with balance roundrobin to configure the load between two servers
+
+sudo apt-get update
+sudo apt-get -y install haproxy
+sudo sed -i '$ a\\nlisten http-in\n\tbind *:80\n\tmode http\n\tbalance roundrobin\n\tserver gc-1172-web-01-1585065463 35.231.61.116:80\n\tserver 1172-web-02 54.197.26.225:80' /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart
