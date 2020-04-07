@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Tass 0 - Run the whoami command under the user passed as an argument
+sudo -u "$1" whoami
