@@ -1,2 +1,25 @@
 #!/usr/bin/env bash
 # Task 1 - Display information about subdomains
+if [ "$#" == 1 ]; then
+    printf "The subdomain www is a "
+    dig +nocmd www."$1" +noall +answer | awk '{printf $4}'
+    printf " record and points to "
+    dig www."$1" +short
+    printf "The subdomain lb-01 is a "
+    dig +nocmd lb-01."$1" +noall +answer | awk '{printf $4}'
+    printf " record and points to "
+    dig lb-01."$1" +short
+    printf "The subdomain web-01 is a "
+    dig +nocmd web-01."$1" +noall +answer | awk '{printf $4}'
+    printf " record and points to "
+    dig web-01."$1" +short
+    printf "The subdomain web-02 is a "
+    dig +nocmd web-02."$1" +noall +answer | awk '{printf $4}'
+    printf " record and points to "
+    dig web-02."$1" +short
+elif [ "$#" == 2 ]; then
+    printf "The subdomain %s is a " "$2"
+    dig +nocmd "$2.$1" +noall +answer | awk '{printf $4}'
+    printf " record and points to "
+    dig "$2.$1" +short
+fi
