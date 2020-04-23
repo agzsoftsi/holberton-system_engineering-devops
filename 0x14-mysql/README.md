@@ -133,6 +133,21 @@ In order for you to set up replication, you’ll need to have a database with at
 - Within the tyrell_corp database create a table named nexus6 and add at least one entry to it.
 - Make sure that holberton_user has SELECT permissions on your table so that we can check that the table exists and is not empty.
 
+- Script task2_db_tb_select-sql
+```
+-- Create a database named tyrell_corp, create a table named nexus6 and add at least one entry to it
+-- Make sure that holberton_user has SELECT permissions on your table so that we can check that the
+-- table exists and is not empty.
+CREATE DATABASE IF NOT EXISTS tyrell_corp;
+USE tyrell_corp;
+CREATE TABLE IF NOT EXISTS nexus6(id INT DEFAULT 1 UNIQUE, name VARCHAR(256));
+INSERT INTO `nexus6` (`id`,`name`) VALUES (1, "Leon");
+GRANT SELECT ON tyrell_corp . * TO holberton_user@localhost;
+FLUSH PRIVILEGES;
+
+```
+
+
 ```
 ubuntu@229-web-01:~$ mysql -uholberton_user -p -e "use tyrell_corp; select * from nexus6"
 Enter password:
