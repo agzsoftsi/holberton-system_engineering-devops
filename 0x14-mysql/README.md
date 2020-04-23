@@ -26,6 +26,45 @@ First things first, let’s get MySQL installed on both your web-01 and web-02 s
 - Please make sure you have your README.md pushed to Github.
 Example:
 
+
+Install MySQL 5.7 on Ubuntu 14.04 LTS
+
+```
+$ echo 'deb http://repo.mysql.com/apt/ubuntu/ trusty mysql-5.7-dmr' | sudo tee -a /etc/apt/sources.list
+$ sudo apt-get update
+$ sudo apt-get install mysql-server-5.7
+...
+$ mysql --version
+mysql  Ver 14.14 Distrib 5.7.8-rc, for Linux (x86_64) using  EditLine wrapper
+$
+```
+
+Don’t forget your root password
+
+Connect to your MySQL server:
+```
+$ mysql -hlocalhost -uroot -p
+Password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 42
+Server version: 5.7.8-rc MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> 
+mysql> quit
+Bye
+$
+```
+If you have some issues to upgrade to 5.7, don’t hesitate to cleanup your server of any MySQL packages: sudo apt-get remove --purge mysql-server mysql-client mysql-common
+
+
 ```
 ubuntu@229-web-01:~$ mysql --version
 mysql  Ver 14.14 Distrib 5.7.25, for Linux (x86_64) using  EditLine wrapper
