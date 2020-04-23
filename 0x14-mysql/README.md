@@ -146,7 +146,18 @@ GRANT SELECT ON tyrell_corp . * TO holberton_user@localhost;
 FLUSH PRIVILEGES;
 
 ```
+- Verify Privilegies 
+```
+mysql> SHOW GRANTS FOR holberton_user@localhost;                                                                
++-----------------------------------------------------------------+                                             
+| Grants for holberton_user@localhost                             |                                             
++-----------------------------------------------------------------+                                             
+| GRANT REPLICATION CLIENT ON *.* TO 'holberton_user'@'localhost' |                                             
+| GRANT SELECT ON `tyrell_corp`.* TO 'holberton_user'@'localhost' |                                             
++-----------------------------------------------------------------+                                             
+2 rows in set (0.00 sec) 
 
+```
 
 ```
 ubuntu@229-web-01:~$ mysql -uholberton_user -p -e "use tyrell_corp; select * from nexus6"
