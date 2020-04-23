@@ -80,6 +80,39 @@ In order for us to verify that your servers are properly configured, we need you
 - In addition to that, make sure that task #3 of your SSH project is completed for web-01 and web-02. You will likely need to add the public key to web-02 as you only added it to web-01 for this project. The checker will connect to your servers to check MySQL status
 Example:
 
+### Steps
+
+- Create script task1_create_user.sql
+```
+-- Create a new user with root privileges
+-- The holberton_user password should be set to user_0d_1_pwd
+CREATE USER IF NOT EXISTS holberton_user@localhost;
+SET PASSWORD FOR holberton_user@localhost = 'projectcorrection280hbtn';
+GRANT REPLICATION CLIENT ON *.* TO holberton_user@localhost;
+FLUSH PRIVILEGES;
+
+```
+
+- Verify User on MySQL
+
+```
+mysql> SELECT user FROM mysql.user;                                                                             
++------------------+                                                                                            
+| user             |                                                                                            
++------------------+                                                                                            
+| debian-sys-maint |                                                                                            
+| holberton_user   |                                                                                            
+| mysql.session    |                                                                                            
+| mysql.sys        |                                                                                            
+| root             |                                                                                            
++------------------+                                                                                            
+5 rows in set (0.01 sec)                                                                                        
+                                                                                                                
+mysql> exit                      
+```
+
+- See the user on MySQL
+
 ```
 ubuntu@229-web-01:~$ mysql -uholberton_user -p -e "SHOW GRANTS FOR 'holberton_user'@'localhost'"
 Enter password:
