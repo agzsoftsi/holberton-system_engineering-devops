@@ -1,0 +1,27 @@
+server {
+    listen 80;
+    listen [::]:80 default_server;
+    root   /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+
+    location = /airbnb-onepage/ {
+        proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
+    }
+
+    location /airbnb-dynamic/number_odd_or_even/{
+        rewrite /airbnb-dynamic/(.*) /$1 break;
+        proxy_pass http://0.0.0.0:5001/number_odd_or_even;
+    }
+
+    error_page 404 /404.html;
+    location = /404.html {
+        internal;
+    }
+    add_header X-Served-By gc-1172-web-01-1585065463;
+    location /hbnb_static {
+        alias /data/web_static/current;
+    }
+}
